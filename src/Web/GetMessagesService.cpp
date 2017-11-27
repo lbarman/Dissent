@@ -67,6 +67,7 @@ namespace Web {
       int zeroes = Utils::Serialization::ReadInt(data, offset + 4);
       if(zeroes == 0) {
         QByteArray message = data.mid(offset + 8, length);
+        qDebug("Got message:"+ message);
         m_message_list.append(message);
       }
 
